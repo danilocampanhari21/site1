@@ -1,0 +1,230 @@
+
+:root{
+    --first-color: #2A323C;
+    --title-color: #1252AE;
+    --text-color: #737D8C;
+    --light-gray: #EBEEF2;
+    --lighter-text: #7A818C;
+    --white: #fff;
+}
+
+
+################## TEST DESCRIPTION
+
+Nemo enim ipsam voluptatem quia voluptas sit aspernat odit aut fugit, sed quia consequuntur magni dolores qui ratione sequi nesciunt.
+
+
+
+
+####### PROPERTY POPULAR
+
+
+---TITLES
+
+* The Most Luxarious House
+
+* Flint Hill Luxarious House
+
+* The Skay View Farm House
+
+* Modern Capital House
+
+* A Modern Accentuates House
+
+* Spacious & Warm Flat
+
+* Orchard Farm House
+
+* Perum Kencana asri Flat
+
+
+
+---LOCATION
+
+* 4059 Waterview Texico, NM 88135
+
+* 470 Lost Creek Road, PA 19103
+
+* 4033 Caynor Piscataway, NJ 08854
+
+* 208 Barrington Court, AR 72601
+
+* 1904 Drummond Newark, NJ 07102
+
+* 4806 Public Works Drive, TN 37745
+
+* 3521 Jenna Lane Des, IA 50309
+
+* 1102 Mattson Street, OR 97205
+
+
+
+
+
+
+######## ABOUT
+
+--TITLES
+
+* We Are The Best And Trusted Real Estate Agent
+
+* We Are Offernig The Best Real Estate Deals
+
+
+
+--- DESCIPTION
+
+Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat.
+
+Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat.
+
+
+
+///////// ACCORDITION 
+
+----- TITLES 
+
+* Sed ut perspiciatis unde omnis ?
+
+* Quis autem vel eum iure reprehenderit ?
+
+* Sed ut perspiciatis unde omnis..?
+
+
+---- TEXT
+
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia consequuntur magni dolores ratione voluptatem sequi nesciunt.
+
+
+////////// LIST
+
+# A building with only one room and typically a steep pointy roof.
+
+# A vehicle on wheels that has a permanent residence attached to it.
+
+# Performing financial analysis and valuation of properties.
+
+# Someone who examines buildings and works with appraisers.
+
+# A dwelling typically made of raw materials such as bamboo, mud, and clay.
+
+
+
+
+
+
+############# TESTIMONIAL 
+
+--NAMES
+
+* Christopher J. Larson
+
+* Derrick P. Boudreaux
+
+* Stanley S. Nesbitt
+
+
+
+--- JOBS
+
+* Service Manager
+
+* Web Developer
+
+* Company Founder
+
+--TEXT
+
+* Maecenas as odio ante tincidunt tempu donec vitae 
+  sapien ut libero venena faucibus nullam quis ante
+  etiam a amet orci eget eros faucibus tincidunt.
+
+
+
+
+///// SWIPER
+
+var swiper = new Swiper(".proterty_container", {
+    slidesPerView: 2,
+    spaceBetween: 10,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 5,
+        spaceBetween: 10,
+      },
+    },
+  });
+
+
+
+
+
+var swiper = new Swiper(".testimonial_container", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+      },
+      1210: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+      },
+    },
+  });
+
+
+
+
+/////// ACCORDITION
+
+  /*=============== QUESTIONS ACCORDION ===============*/
+const accordionItems = document.querySelectorAll('.accordition_item')
+
+accordionItems.forEach((item) =>{
+    const accordionHeader = item.querySelector('.about_header')
+
+    accordionHeader.addEventListener('click', () =>{
+        const openItem = document.querySelector('.accordion-open')
+
+        toggleItem(item)
+
+        if(openItem && openItem!== item){
+            toggleItem(openItem)
+        }
+    })
+})
+
+const toggleItem = (item) =>{
+    const accordionContent = item.querySelector('.about_accordition-content')
+
+    if(item.classList.contains('accordion-open')){
+        accordionContent.removeAttribute('style')
+        item.classList.remove('accordion-open')
+    }else{
+        accordionContent.style.height = accordionContent.scrollHeight + 'px'
+        item.classList.add('accordion-open')
+    }
+
+}
